@@ -1,0 +1,7 @@
+ethereum:
+  default_network: mainnet
+
+geth:
+  ethereum:
+    mainnet:
+      uri: https://
