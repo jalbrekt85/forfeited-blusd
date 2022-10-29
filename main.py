@@ -21,7 +21,7 @@ if __name__ == "__main__":
             lambda x: get_accrued_blusd(x["bondId"], x["block_number"]), axis=1
         )
 
-        lusd_rate = lusd3crv_pool.get_dy(0, 1, int(1e18)) / 1e18
+        lusd_rate = lusd3crv_pool.get_dy_underlying(0, 1, int(1e18)) / 1e18
         blusd_rate = blusd_lusd3crv_pool.get_dy(0, 1, int(1e18)) / 1e18
 
         df["usd_value"] = df["accrued_blusd"].apply(
